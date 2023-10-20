@@ -1,0 +1,4 @@
+usr/include
+usr/lib/*/libomxil*.a
+usr/lib/*/libomxil*.so
+usr/lib/*/pkgconfig

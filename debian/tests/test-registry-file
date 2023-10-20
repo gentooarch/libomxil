@@ -1,0 +1,57 @@
+#!/bin/sh
+
+REGISTRYFILE="/var/lib/libomxil-bellagio0/registry"
+
+if [ ! -f "$REGISTRYFILE" ]; then
+   exit 404
+fi
+
+grep -q "libomxclocksrc.so" "$REGISTRYFILE"
+if [ $? -eq 0 ] ; then
+    echo "Pass - libomxclocksrc.so"
+else
+    echo "Fail - libomxclocksrc.so"
+    exit 1
+fi
+
+grep -q "libomxaudio_effects.so" "$REGISTRYFILE"
+if [ $? -eq 0 ] ; then
+    echo "Pass - libomxaudio_effects.so"
+else
+    echo "Fail - libomxaudio_effects.so"
+    exit 2
+fi
+
+grep -q "libomxvideosched.so" "$REGISTRYFILE"
+if [ $? -eq 0 ] ; then
+    echo "Pass - libomxvideosched.so"
+else
+    echo "Fail - libomxvideosched.so"
+    exit 3
+fi
+
+grep -q "OMX.st.clocksrc" "$REGISTRYFILE"
+if [ $? -eq 0 ] ; then
+    echo "Pass - OMX.st.clocksrc"
+else
+    echo "Fail - OMX.st.clocksrc"
+    exit 4
+fi
+
+grep -q "OMX.st.audio.mixer" "$REGISTRYFILE"
+if [ $? -eq 0 ] ; then
+    echo "Pass - OMX.st.audio.mixer"
+else
+    echo "Fail - OMX.st.audio.mixer"
+    exit 5
+fi
+
+grep -q "OMX.st.video.scheduler" "$REGISTRYFILE"
+if [ $? -eq 0 ] ; then
+    echo "Pass - OMX.st.video.scheduler"
+else
+    echo "Fail - OMX.st.video.scheduler"
+    exit 6
+fi
+
+exit

@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+DEB_BUILD_MULTIARCH=`dpkg-architecture -qDEB_BUILD_MULTIARCH`
+
+if type dpkg-trigger >/dev/null 2>&1 && \
+   dpkg-trigger /usr/lib/"$DEB_BUILD_MULTIARCH"/libomxil-bellagio0; then
+      exit 0
+fi
+
+exec omxregister-bellagio "$@"

@@ -1,0 +1,139 @@
+libomxil-bellagio (0.9.3-7ubuntu1) jammy; urgency=low
+
+  * Merge from Debian unstable. Remaining changes:
+    - Use -O2 to fix a build failure on ppc64el
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 09 Nov 2021 16:00:47 +0100
+
+libomxil-bellagio (0.9.3-7) unstable; urgency=low
+
+  * Fix FTBFS with GCC-11. (Closes: #984195)
+    - add debian/patches/0016_port_gcc_11.patch
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Mon, 08 Nov 2021 12:04:44 +0800
+
+libomxil-bellagio (0.9.3-6ubuntu3) groovy; urgency=medium
+
+  * Use gcc-9 to fix a build failure on s390x
+  * Use -O2 to fix a build failure on ppc64el
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 12 Aug 2020 17:30:18 +0200
+
+libomxil-bellagio (0.9.3-6) unstable; urgency=low
+
+  * Use linktrees instead of links.
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Wed, 12 Aug 2020 15:16:26 +0800
+
+libomxil-bellagio (0.9.3-5) unstable; urgency=low
+
+  * Multi-arch support
+     - Move libs to multiarch path (Closes: #928847)
+     - Add Multi-Arch foreign to -doc package. (Closes: #949568)
+  * Bump Standards-Version to 4.5.0: Nothing needs to be changed.
+  * Bump debhelper compat to 11
+    - Remove Build-Depends on autotools-dev and dh-autoreconf
+    - Add debian/patches/0014_fix_hardening.patch: fix hardening error
+  * Remove Vcs-Git and Vcs-Browser field
+  * Remove *-dbg packages. Now we have -dbgsym packages. (Closes: #620832)
+  * Add debian/patches/0015_port_gcc_10.patch: port to gcc 10.
+    - (Closes: #957453)
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Sun, 09 Aug 2020 15:48:03 +0800
+
+libomxil-bellagio (0.9.3-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix the Makefile dependencies. (Closes: #906604)
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 22 Sep 2018 22:56:46 +0300
+
+libomxil-bellagio (0.9.3-4) unstable; urgency=low
+
+  * Move runnables to libomxil-bellagio-bin package. (Closes: #841977)
+  * Bump Standards-Version to 3.9.8: Nothing needs to be changed.
+  * Bump debhelper compat to 8
+  * Use patch from #625367 to override 0006_fix_FTBFS_for_gcc4.6.patch.
+    (Closes: #625367)
+    - Also with this patch, we don't use unregonised parameters for gcc 4.5.
+      (Closes: #645373)
+  * Add patches/0009_fix_BOSA_ST_InitComponentLoader_buffer_overrun.patch
+    - (Closes: #741541)
+  * Add patches/0010_Fix_FTBFS_Hurd_FreeBSD.patch (Closes: #681731)
+  * Remove unnecessary libav Build-Depends (Closes: #748156)
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Sun, 13 Nov 2016 04:47:10 +0800
+
+libomxil-bellagio (0.9.3-3) unstable; urgency=low
+
+  * Add debian/patches/0008_fix_FTBFS_for_gcc5.patch
+    - Fix FTBFS for gcc-5 (Closes: #777961)
+    - Thanks to Linn Crosetto <linn@hp.com>
+  * Bump Standards-Version to 3.9.6: Nothing needs to be changed.
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Fri, 10 Jul 2015 18:04:06 +0800
+
+libomxil-bellagio (0.9.3-2) unstable; urgency=medium
+
+  * Fix FTBFS. (Closes: #738394)
+    - Add libjs-jquery to Build-Depends.
+    - Use libomxil-bellagio-doc.links to handle jquery.js symbolic link
+  * Bump Standards-Version to 3.9.5: Nothig needs to be changed.
+  * debian/copyright: format revised
+  * Add debian/patches/0007_remove_online_sourceforge_logo.patch:
+    - Remove the online logo to solve lintian: privacy-breach-logo
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Thu, 20 Feb 2014 03:36:26 +0800
+
+libomxil-bellagio (0.9.3-1) unstable; urgency=low
+
+  * New upstream release 0.9.3
+  * Add NEWS in doc
+  * Imported Upstream version 0.9.3
+  * Bump Standards-Version to 3.9.2: Nothing needs to be changed.
+  * 0006_fix_FTBFS_for_gcc4.6.patch: Fix FTBFS with gcc 4.6 (Closes: #625367)
+  * Use jQuery.js from libjs-jquery
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Tue, 19 Jul 2011 11:44:44 +0800
+
+libomxil-bellagio (0.9.2.1+git20110117.863d289e-1) unstable; urgency=low
+
+  * Pack from upstream latest git tree.
+    - Fix FTBFS: 64-bit-unclean pointer->int casts (Closes: #614145)
+  * delete 0004_fix_videosched_crash.patch: already upstreamed.
+  * Update debian/copyright to latest dep5 standard (version 166)
+  * Update doc package to install html files.
+  * Include patches from Ubuntu
+    - 0004_fix_FTBFS_for_natty.patch: to fix FTBFS with gcc 4.5
+    - 0005_test_build.patch: fix test suite FTBFS
+    - Thanks to Kunal Goel <kunal.goel@linaro.org>
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Mon, 21 Feb 2011 00:43:39 +0800
+
+libomxil-bellagio (0.9.2.1-2) unstable; urgency=low
+
+  * Change libomxil-bellagio0-components to libomxil-bellagio0-components-base
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Mon, 07 Feb 2011 18:37:53 +0800
+
+libomxil-bellagio (0.9.2.1-1) unstable; urgency=low
+
+  * New upstream release 0.9.2.1
+  * Use DebSrc3.0
+  * Use Debhelper7
+  * Use dh-autoreconf
+  * Use Machine-readable copyright file
+  * Rebase 0001-Fallback-on-different-registry-location-except-for.patch
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Fri, 17 Dec 2010 16:36:02 +0800
+
+libomxil-bellagio (0.9.2) stable; urgency=low
+  * Debian package creation fix.
+  * Initial release by Sandino Flores <sflores@dextratech.com>  Sun, 12 Oct 2008 22:45:39 -0500
+ -- Giulio Urlini <giulio.urlini@st.com>  Mon, 19 May 2009 14:51:00 +0100
+
+libomxil-bellagio (0.9.1-1) UNRELEASED; urgency=low
+
+  * Initial Debian release (Closes: #456911).
+
+ -- Marc-Andre Lureau <marcandre.lureau@gmail.com>  Tue, 23 Sep 2008 15:54:28 +0300

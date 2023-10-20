@@ -1,0 +1,3 @@
+# The package triggers this is important. Without the registry being
+# generated, it won't work.
+interest-await /usr/lib/#MULTIARCH#/libomxil-bellagio0

@@ -1,0 +1,14 @@
+Bellagio for Debian
+-------------------
+
+Bellagio components are installed under /usr/lib/libomxil-bellagio0.
+This package is a bit different than the standard one.
+It will fall back to load registry files from 
+/var/lib/libomxil-bellagio0/registry when ~/.omxregistry or other possible
+registry paths are not found.
+
+Package that contains components can just put their .so files into
+/usr/lib/libomxil-bellagio0. It will automatically trigger libomxil-bellagio0
+to regenerate the system-wide registry file.
+
+ -- Marc-Andre Lureau <marcandre.lureau@gmail.com>, Mon, 14 Jul 2008 10:46:14 +0300

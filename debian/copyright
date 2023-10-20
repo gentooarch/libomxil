@@ -1,0 +1,75 @@
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=166
+Upstream-Name: libomxil-bellagio
+Upstream-Contact: Giulio Urlini <gsent@users.sourceforge.net>
+                  Bhattacharyya Sourya
+                  David Siorpaes <siorpaes@users.sourceforge.net>
+                  Diego Melpignano <dmelpi@users.sourceforge.net>
+                  Felipe Contreras <felipec@users.sourceforge.net>
+                  Fouet Benoit
+                  Pankaj Sen <pankaj_sen@users.sourceforge.net>
+                  Ukri Niemimuukko <ukniemim@users.sourceforge.net>
+Source: http://sourceforge.net/projects/omxil/
+
+Files: *
+Copyright: 2007-2009 STMicroelectronics
+           2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+License: LGPL-2.1+
+
+Files: extern_components/camera/src/*.c extern_components/examples/src/omxcameratest.*
+Copyright: 2007-2009 Motorola and STMicroelectronics
+License: LGPL-2.1+
+
+Files: extern_components/fbvideo/src/omx_fbdev_sink_component.* extern_components/ffmpeg-dist/src/omx_ffmpeg_colorconv_component.*
+Copyright: 2007-2009 STMicroelectronics and Agere Systems
+License: LGPL-2.1+
+
+Files: include/*.h
+Copyright: 2008 The Khronos Group Inc.
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject
+ to the following conditions:
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Files: m4/*
+Copyright: 1996-2008 Free Software Foundation, Inc.
+License: FSF
+ This file is free software; the Free Software Foundation gives
+ unlimited permission to copy and/or distribute it, with or without
+ modifications, as long as this notice is preserved.
+
+Files: debian/*
+Copyright: 2007 Marc-Andre Lureau <marcandre.lureau@gmail.com>
+           2010 Ying-Chun Liu (PaulLiu) <paulliu@debian.org>
+License: LGPL-2.1+
+
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian GNU/Linux systems, the complete text of the GNU Lesser General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
